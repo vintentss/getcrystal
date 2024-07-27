@@ -224,6 +224,6 @@ footer {
 /* Animation for background */
 @keyframes bg-animation {
     0% { background-color: #000000; } /* Black */
-    50% { background-color: #4B0082; } /* Dark Purple */
+    50% { background-color: #301934; } /* Dark Purple */
     100% { background-color: #000000; } /* Black */
 }
