@@ -2,20 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="https://images-ext-1.discordapp.net/external/GvHH-vuyj47_cfuRwKyYnNaJhz-XY9bXSpDQHyVBNVI/%3Fsize%3D4096/https/cdn.discordapp.com/icons/1246149257950400573/b2953801fc677a467915647e538b568c.png?format=webp&quality=lossless&width=417&height=417" type="image/x-icon">
+    <meta property="og:title" content="Crystal - #1 Executor">
+    <meta property="og:description" content="Unleash the Spark with Crystal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getcrystal.vercel.app/">
+    <meta property="og:image" content="https://images-ext-1.discordapp.net/external/GvHH-vuyj47_cfuRwKyYnNaJhz-XY9bXSpDQHyVBNVI/%3Fsize%3D4096/https/cdn.discordapp.com/icons/1246149257950400573/b2953801fc677a467915647e538b568c.png?format=webp&quality=lossless&width=417&height=417">
+    <meta property="og:image:height" content="128">
+    <meta property="og:image:width" content="128">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Executor</title>
+    <title>Crystal - Roblox Executor</title>
+    
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease-out;
+        }
+
+        #loading-screen.fade-out {
+            opacity: 0;
+        }
+        .loading-msg {
+            text-align: center;
+            color: white;
+        }
+        #progress-bar {
+            width: 100%;
+            background-color: #333;
+        }
+        #progress {
+            height: 20px;
+            background-color: #e74c3c;
+            width: 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- Loading Screen -->
     <div id="loading-screen">
-        <div id="loading-bar">
-            <div id="loading-progress"></div>
+        <div id="loading-content">
+            <img src="https://images-ext-1.discordapp.net/external/GvHH-vuyj47_cfuRwKyYnNaJhz-XY9bXSpDQHyVBNVI/%3Fsize%3D4096/https/cdn.discordapp.com/icons/1246149257950400573/b2953801fc677a467915647e538b568c.png?format=webp&quality=lossless" alt="Crystal Logo" class="loading-logo">
+            <h2 class="loading-msg"></h2>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p style="text-align: center;" class="percent">0%</p>
         </div>
     </div>
-    <div id="content">
-        <div class="animated-bg"></div>
-        <h1>Unleash the Spark</h1>
-    </div>
-    <script src="script.js"></script>
+
+    <header>
+        <img src="https://images-ext-1.discordapp.net/external/GvHH-vuyj47_cfuRwKyYnNaJhz-XY9bXSpDQHyVBNVI/%3Fsize%3D4096/https/cdn.discordapp.com/icons/1246149257950400573/b2953801fc677a467915647e538b568c.png?format=webp&quality=lossless" alt="Crystal Logo" class="logo" draggable="false">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h3>Introducing...</h3>
+            <h1>Crystal.</h1>
+            <p>Unleash the Spark with our ultimate executor.</p>
+            <a href="#download" class="btn">Download Now</a>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>High Performance</h3>
+                <p>Experience unparalleled speed and efficiency.</p>
+            </div>
+            <div class="feature">
+                <h3>User-Friendly Interface</h3>
+                <p>Easy to navigate with a sleek design.</p>
+            </div>
+            <div class="feature">
+                <h3>Regular Updates</h3>
+                <p>Stay ahead with frequent updates and new features.</p>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Download Crystal.</h2>
+            <p>Get the latest version of Crystal for the best Roblox experience. <br>No ads, no malware. Just fun.</p><br>
+            <a href="https://discord.gg/qWNG9akSSS" class="btn">Download</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+            <a href="https://discord.gg/qWNG9akSSS" class="discord-link">Discord server here to help!</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Crystal. All rights reserved.</p>
+        <p>Designed by Vertex.</p>
+        <!-- i was forced to remove this <p>Also check out <a href="https://byfronsucks.vercel.app/" style="color: #e74c3c; text-decoration: underline;">Bypassers, inc</a>!</p>
+    --></footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Loading screen logic
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            const progressBar = document.getElementById('progress');
+            const loadingMsg = document.querySelector('.loading-msg');
+            const percentText = document.querySelector('.percent');
+            const messages = [
+                'SKIBIDI RIZZ (loading msg)'
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            loadingMsg.textContent = randomMsg;
+
+            let width = 0;
+            const progressInterval = setInterval(function () {
+                if (width >= 100) {
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '100%';
+                    percentText.textContent = '100%';
+                    setTimeout(function () {
+                        loadingScreen.classList.add('fade-out');
+                        setTimeout(function () {
+                            loadingScreen.style.display = 'none';
+                        }, 1000); // Match this time with the CSS transition duration
+                    }, 500); // Slight delay before starting the fade-out to ensure the bar is fully shown
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                    percentText.textContent = width + '%';
+                }
+            }, 10); // ms per percent
+        });
+    </script>
 </body>
 </html>
