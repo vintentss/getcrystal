@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: azure; /* Azure */
-    background: #000;
+    color: #B22222; /* Middle Red */
+    background: #000000; /* Black */
     line-height: 1.6;
 }
 
@@ -17,7 +17,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: #000000; /* Black */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ body {
 #progress-bar {
     width: 300px;
     height: 20px;
-    background: #333;
+    background: #333333; /* Dark Grey */
     border-radius: 10px;
     overflow: hidden;
 }
@@ -45,7 +45,7 @@ body {
 #progress {
     height: 100%;
     width: 0;
-    background: goldenrod; /* Gold */
+    background: #B22222; /* Middle Red */
     transition: width 0.5s;
 }
 
@@ -62,7 +62,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background: #111;
+    background: #111111; /* Dark Grey */
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
@@ -82,13 +82,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: azure; /* Azure */
+    color: #B22222; /* Middle Red */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: goldenrod; /* Gold */
+    color: #DAA520; /* Darker Gold */
 }
 
 main {
@@ -101,8 +101,8 @@ section {
 }
 
 #home {
-    background: linear-gradient(to right, #000, #222);
-    color: azure; /* Azure */
+    background: linear-gradient(to right, #000000, #222222); /* Black to Dark Grey */
+    color: #B22222; /* Middle Red */
     padding: 100px 0;
 }
 
@@ -117,8 +117,8 @@ section {
 }
 
 #home .btn {
-    background: goldenrod; /* Gold */
-    color: #000;
+    background: #B22222; /* Middle Red */
+    color: #000000; /* Black */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -128,11 +128,11 @@ section {
 }
 
 #home .btn:hover {
-    background: #daa520; /* Darker gold */
+    background: #DAA520; /* Darker Gold */
 }
 
 #features {
-    background: #000;
+    background: #000000; /* Black */
 }
 
 #features h2 {
@@ -143,14 +143,14 @@ section {
 .feature {
     margin: 20px 0;
     padding: 20px;
-    background: #111;
+    background: #111111; /* Dark Grey */
     border-radius: 10px;
     transition: transform 0.3s, background 0.3s;
 }
 
 .feature:hover {
     transform: scale(1.05);
-    background: #222;
+    background: #222222; /* Dark Grey */
 }
 
 #download h2 {
@@ -159,8 +159,8 @@ section {
 }
 
 #download .btn {
-    background: goldenrod; /* Gold */
-    color: #000;
+    background: #B22222; /* Middle Red */
+    color: #000000; /* Black */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -169,7 +169,7 @@ section {
 }
 
 #download .btn:hover {
-    background: #daa520; /* Darker gold */
+    background: #DAA520; /* Darker Gold */
 }
 
 #contact h2 {
@@ -178,19 +178,19 @@ section {
 }
 
 #contact .discord-link {
-    color: azure; /* Azure */
+    color: #B22222; /* Middle Red */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 #contact .discord-link:hover {
-    color: goldenrod; /* Gold */
+    color: #DAA520; /* Darker Gold */
 }
 
 footer {
-    background: #111;
-    color: azure; /* Azure */
+    background: #111111; /* Dark Grey */
+    color: #B22222; /* Middle Red */
     text-align: center;
     padding: 10px 0;
     position: relative;
@@ -202,20 +202,20 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: #000000; /* Black */
     border-radius: 10px;
 }
 
 ::selection {
-    color: #000; /* Gold */
-    background: #fff;
+    color: #000000; /* Black */
+    background: #B22222; /* Middle Red */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #333333; /* Dark Grey */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #444;
+    background: #444444; /* Dark Grey */
 }
