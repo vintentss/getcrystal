@@ -10,7 +10,7 @@ body {
     color: #B22222; /* Middle Red */
     background: #000000; /* Fallback background color */
     line-height: 1.6;
-    animation: bg-animation 10s infinite alternate;
+    animation: bg-animation 5s infinite alternate;
 }
 
 /* Loading screen styles */
@@ -224,6 +224,6 @@ footer {
 /* Animation for background */
 @keyframes bg-animation {
     0% { background-color: #000000; } /* Black */
-    50% { background-color: #301934; } /* Dark Purple */
+    50% { background-color: #333; } /* Dark Purple */
     100% { background-color: #000000; } /* Black */
 }
