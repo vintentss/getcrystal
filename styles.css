@@ -1,63 +1,221 @@
-body, html {
+/* Reset some default browser styles for a cleaner look */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    color: azure; /* Azure */
+    background: #000;
+    line-height: 1.6;
+}
+
+/* Loading screen styles */
 #loading-screen {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 10000;
 }
 
-#loading-bar {
-    width: 80%;
-    height: 30px;
-    background-color: #333;
-    border-radius: 15px;
+#loading-content {
+    text-align: center;
+}
+
+.loading-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    width: 300px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-#loading-progress {
+#progress {
     height: 100%;
     width: 0;
-    background-color: #ff0000;
-    border-radius: 15px 0 0 15px;
+    background: goldenrod; /* Gold */
     transition: width 0.5s;
 }
 
-#content {
-    display: none;
-    position: relative;
+header {
+    position: fixed;
     width: 100%;
-    height: 100%;
-    color: #fff;
+    transition: top 0.5s, opacity 0.5s;
+    opacity: 0.87;
+    z-index: 1000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #111;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: azure; /* Azure */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: goldenrod; /* Gold */
+}
+
+main {
+    padding: 20px 10%;
+}
+
+section {
+    padding: 60px 0;
     text-align: center;
-    z-index: 1;
 }
 
-.animated-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('bg.jpg') center center / cover no-repeat;
-    filter: blur(10px);
-    animation: animateBg 20s linear infinite;
-    z-index: -1;
+#home {
+    background: linear-gradient(to right, #000, #222);
+    color: azure; /* Azure */
+    padding: 100px 0;
 }
 
-@keyframes animateBg {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+#home h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#home .btn {
+    background: goldenrod; /* Gold */
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    user-select: none;   
+    selection: none;
+}
+
+#home .btn:hover {
+    background: #daa520; /* Darker gold */
+}
+
+#features {
+    background: #000;
+}
+
+#features h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.feature {
+    margin: 20px 0;
+    padding: 20px;
+    background: #111;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    background: #222;
+}
+
+#download h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#download .btn {
+    background: goldenrod; /* Gold */
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+#download .btn:hover {
+    background: #daa520; /* Darker gold */
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact .discord-link {
+    color: azure; /* Azure */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact .discord-link:hover {
+    color: goldenrod; /* Gold */
+}
+
+footer {
+    background: #111;
+    color: azure; /* Azure */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Custom scrollbar styles for Webkit browsers */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 10px;
+}
+
+::selection {
+    color: #000; /* Gold */
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
 }
